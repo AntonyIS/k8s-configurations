@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notelify-config
+data:
+  aws_default_region: me-south-1
+  database_host: notlify-db.ct2cfoaywq7d.me-south-1.rds.amazonaws.com
+  rds_instance_identifier: notlify-db
+  database_user: postgres
