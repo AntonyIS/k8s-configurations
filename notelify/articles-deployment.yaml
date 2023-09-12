@@ -35,11 +35,21 @@ spec:
                 secretKeyRef:
                   name: notelify-secret
                   key: secret_key
+            - name: DatabasePassword
+              valueFrom:
+                secretKeyRef:
+                  name: notelify-secret
+                  key: database_password
             - name: AWS_DEFAULT_REGION
               valueFrom:
                 configMapKeyRef:
                   name: notelify-config
                   key: aws_default_region
+            - name: DatabaseUser
+              valueFrom:
+                configMapKeyRef:
+                  name: notelify-config
+                  key: database_user
             - name: DatabaseHost
               valueFrom:
                 configMapKeyRef:
